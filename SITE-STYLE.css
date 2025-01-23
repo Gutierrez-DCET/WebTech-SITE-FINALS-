@@ -53,21 +53,25 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #cce7ff;
+    background-image: url('https://www.shutterstock.com/image-photo/beautiful-defocused-office-background-interior-600nw-2338120081.jpg'); /* Replace 'your-image-url.jpg' with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
     text-align: center;
     padding: 80px 20px;
     border-bottom: 1px solid #b3d1ff;
+    color: white; /* Ensures the text is readable over the image */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to the text for better contrast */
 }
 
 .hero h2 {
     font-size: 36px;
-    color: #212b36;
+    color: #000000;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
-    color: #637381;
+    color: #242c33;
     margin-bottom: 30px;
 }
 
@@ -187,16 +191,65 @@ body {
 
 .resources ul {
     list-style: none;
+    padding: 0;
     text-align: center;
 }
 
 .resources li {
-    margin: 10px 0;
+    background-size: cover; /* Ensures the background image fills the area */
+    background-position: center; /* Centers the background image */
+    height: 150px; /* Fixed height to ensure consistency */
+    display: flex; /* Flexbox for content alignment */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    color: #3a4047; /* Ensures text is visible on the background */
+    padding: 10px; /* Spacing inside the element */
+    margin: 10px auto; /* Adds spacing and centers the elements */
+    width: 100%; /* Ensures elements adapt to the container width */
+    max-width: 1000px; /* Restricts the maximum width */
+    transition: transform 0.3s; /* Optional: Add hover effect */
+    border-radius: 10px;
+}
+
+.resources li:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.resources li h3 a {
+    color: rgb(63, 76, 255);
+    text-shadow: 1px 1px 5px rgba(100, 95, 95, 0.7); /* Add shadow to text for contrast */
+}
+
+.resources li p {
+    text-shadow: 1px 1px 5px rgba(104, 95, 95, 0.7);
+}
+
+@media (max-width: 768px) {
+    .resources li {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Background images for specific items */
+.resources li.sba {
+    background-image: url(''); /* Replace with the SBA image URL */
+}
+
+.resources li.shopify {
+    background-image: url('https://via.placeholder.com/600x400'); /* Replace with the Shopify image URL */
+}
+
+.resources li.score {
+    background-image: url('path-to-score-image.jpg'); /* Replace with the SCORE image URL */
+}
+
+.resources li.hubspot {
+    background-image: url('path-to-hubspot-image.jpg'); /* Replace with the HubSpot image URL */
 }
 
 .resources a {
     text-decoration: none;
-    color: #5c6ac4;
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s;
